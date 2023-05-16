@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ComicController;
+use App\Http\Controllers\Guest\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -103,3 +105,4 @@ Route::get('/', function () use($headLinks, $shopPics, $referenze) {
     $fumetti = config("comics");
     return view('home', compact("fumetti", "headLinks", "shopPics", "referenze"));
 });
+Route::resource("/comics", ComicController::class);
