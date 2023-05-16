@@ -99,9 +99,7 @@ $referenze = [
 //     return view('home', compact('headLinks'));
 // });
 //quello di sopra è obsoleto perché per mandare tutto a home posso fare tutto in una route e due route uguali a home daranno errore 
-
 Route::get('/', function () use($headLinks, $shopPics, $referenze) {
     $fumetti = config("comics");
     return view('home', compact("fumetti", "headLinks", "shopPics", "referenze"));
 });
-

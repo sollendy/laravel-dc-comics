@@ -12,12 +12,15 @@
                         </ul>
                     </li> --}}
                     @foreach ($referenze as $refItem)
-                        <li>
-                            <h4>{{$refItem["titolo"]}}</h4>
-                            <ul>
-                                {{-- <li>{{$refItem["link"]}}</li> --}}
-                            </ul>
-                        </li>
+                        <ul>
+                            <li>
+                                <h4>{{$refItem["titolo"]}}</h4>
+                                @foreach ($refItem["link"] as $item)
+                                <li>{{$item}}</li>
+ 
+                                @endforeach
+                            </li>
+                        </ul>
                     @endforeach
                 </ul>
             </div>

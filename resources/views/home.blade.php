@@ -23,7 +23,7 @@
                 @foreach ($shopPics as $shopItem)
                 <li>
                     <div>
-                        <img src="{{$shopItem["img"]}}" alt="shop-pics">
+                        <img src="{{ Vite::asset($shopItem["img"]) }}" alt="shop-pics">
                     </div>
                     <span>{{$shopItem["testo"]}}</span>
                 </li>
