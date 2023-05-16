@@ -23,12 +23,13 @@ class ComicSeeder extends Seeder
             $newComic->description = $alboSolo["description"];
             $newComic->thumb = $alboSolo["thumb"];
             $newComic->price = $alboSolo["price"];
-            $newComic->artists = $alboSolo["artists"];
-            $newComic->writers = $alboSolo["writers"];
+            // $newComic->artists = $alboSolo["artists"];
+            // $newComic->writers = $alboSolo["writers"];
             $newComic->series = $alboSolo["series"];
             $newComic->sale_date = $alboSolo["sale_date"];
 
             $newComic->save();
         }
+        dd($comicsArray);
     }
 }

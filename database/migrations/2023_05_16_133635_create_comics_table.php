@@ -19,9 +19,9 @@ return new class extends Migration
             $table->string("title");
             $table->text("description");
             $table->text("thumb");
-            $table->integer("price");
-            $table->text("artists");
-            $table->text("writers");
+            $table->string("price");
+            // $table->text("artists");
+            // $table->text("writers");
             $table->string("series");
             $table->string("sale_date");
 
