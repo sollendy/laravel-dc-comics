@@ -1,0 +1,219 @@
+@import '~bootstrap/scss/bootstrap';
+#stile-head {
+    .head-cnt {
+        padding: 5px 0 0 0;
+        // border-bottom: 1px solid blue;
+        // width: 100%;
+        nav {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            gap: 20%;
+
+            .nav-img {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                img {
+                    width: 70px;
+                }
+            }
+            
+            ul {
+                list-style-type: none;
+                display: flex;
+                align-items: center;
+                text-transform: uppercase;
+                li {
+                    padding: 10px;
+                    font-size: 10px;
+                    font-weight: bold;
+                    color: rgb(68, 68, 68);
+                    position: relative;
+                }
+                li:hover {
+                    color: rgb(2, 130, 249);
+                    // border-bottom: 3px solid rgb(2, 130, 249);
+                }
+                li:hover::before {
+                    content: "";
+                    position: absolute;
+                    top: 192%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 50%;
+                    height: 3px;
+                    background-color: rgb(2, 130, 249);
+                }
+            }
+        }
+        #jumbo-cnt {
+            height: 280px;
+            background-image: url(../images/jumbotron.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+    }
+}
+#stile-main{
+    #corpo-pagina {
+        padding-top: 20px;
+        background-color: black;
+        color: white;
+        position: relative;
+        // display: flex;
+        .banner-serie {
+            background-color: rgb(0, 78, 146);
+            font-size: 12px;
+            font-weight: bold;
+            // height: 13.5px;
+            width: 130px;
+            padding: 5px;
+            position: absolute;
+            top: -12px;
+            left: 95px;
+            text-align: center;
+        }
+        .mostra {
+            background-color: rgb(0, 78, 146);
+            width: 130px;
+            padding: 5px;
+            font-size: 10px;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            bottom: 10px;
+            text-align: center;
+            // text-align: center;
+        }
+        #comic-cont {
+            padding-bottom: 15px;
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-flow: row wrap;
+            .albi {
+                width: calc(100% / 6);
+                padding: 10px 10px;
+                font-size: small;
+                // display: flex;
+                img {
+                    width: 100%;
+                    height: 60%;
+                }
+            }
+            // img {
+            //     width: 100px;
+            // }
+        }
+
+    }
+    #barra-celeste {
+        background-color: rgb(0, 78, 146);
+        color: white;
+        // z-index: 5;
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            list-style-type: none;
+            gap: 20px;
+            li {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 10px;
+                img {
+                    width: 35px;
+                }
+                span {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
+#stile-footer{
+    .sec-1{
+        // display: flex;
+        // justify-content: space-between;
+        // align-items: center;
+        color: white;
+        background-image: (url("../images/footer-bg.jpg"));
+        background-repeat: repeat;
+        
+        #liste-link{
+            width: 80%;
+            margin: auto;
+            padding: 40px 0;
+            position: relative;
+            .links {
+                width: 70%;
+                #lista-cnt {
+                    list-style-type: none;
+                    width: 55%;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-flow: row wrap;
+                    ul {
+                        padding-top: 10px;
+                        list-style-type: none;
+                        font-size: 10px;
+                        li {
+                            // padding-bottom: ;
+                            color: grey;
+                            padding-bottom: 5px;
+                        }
+                    }
+                }
+            }
+            #img-foot-cnt {
+                position: absolute;
+                top: 10px;
+                right: -95px;
+                // z-index: 1;
+                overflow: hidden;
+                img {
+                    width: 60%;
+                }
+            }
+        }
+    }
+    .sec-2 {
+        background-color: rgb(48, 48, 48);
+        #last-nav {
+            width: 80%;
+            margin: auto;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            #btn-cnt {
+                button {
+                    background-color: rgb(48, 48, 48);
+                    color: white;
+                    padding: 5px;
+                    border: solid 2px rgb(6, 133, 255);
+                }
+            }
+            #social-links {
+                display: flex;
+                // align-items: center;
+                gap: 5px;
+                ul {
+                    display: flex;
+                    align-items: center;
+                    list-style-type: none;
+                    h4 {
+                        color: rgb(6, 133, 255);
+                        padding: 0 10px 0 0;
+                    }
+                }
+            }
+        }
+    }
+}
