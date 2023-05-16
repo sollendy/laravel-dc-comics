@@ -30,6 +30,6 @@ class ComicSeeder extends Seeder
 
             $newComic->save();
         }
-        dd($comicsArray);
+        // dd($comicsArray);
     }
 }
