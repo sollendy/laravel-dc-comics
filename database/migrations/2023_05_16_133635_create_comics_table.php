@@ -23,6 +23,7 @@ return new class extends Migration
             // $table->text("artists");
             // $table->text("writers");
             $table->string("series");
+            $table->string("type");
             $table->string("sale_date");
 
             $table->timestamps();

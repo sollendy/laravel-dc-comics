@@ -26,6 +26,7 @@ class ComicSeeder extends Seeder
             // $newComic->artists = $alboSolo["artists"];
             // $newComic->writers = $alboSolo["writers"];
             $newComic->series = $alboSolo["series"];
+            $newComic->type = $alboSolo["type"];
             $newComic->sale_date = $alboSolo["sale_date"];
 
             $newComic->save();
