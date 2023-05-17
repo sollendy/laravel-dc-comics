@@ -30,7 +30,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //return view('comics/create');
+        return view('comics/create');
     }
 
     /**
@@ -41,25 +41,12 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //$formData = $request->all();
+        $formData = $request->all();
+        $newComic = new Comic();
+        $newComic->fill($formData);
+        $newComic->save();
 
-        //$newPasta = new Pasta();
-
-        
-        // $newPasta->title = $formData['title'];
-        // $newPasta->description = $formData['description'];
-        // $newPasta->type = $formData['type'];
-        // $newPasta->src = $formData['src'];
-        // $newPasta->cooking_time = $formData['cooking_time'];
-        // $newPasta->weight = $formData['weight'];
-        
-        
-        // metodo che in automatico assegna ad ogni proprietà del model il valore che ci passa il form
-        //$newPasta->fill($formData);
-        
-        //$newPasta->save();
-
-        //return redirect()->route('pastas.show', $newPasta->id);
+        return redirect()->route('comics.show', $newComic->id);
     }
 
     /**
