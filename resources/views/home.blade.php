@@ -5,16 +5,16 @@
             <div class="banner-serie">
                 SERIE IN CORSO
             </div>
-            <div id="comic-cont">
+            {{-- <div id="comic-cont">
                 @foreach ($fumetti as $albo)
                 <div class="albi text-center text-uppercase">
                     <img src="{{$albo["thumb"]}}" alt="copertina"><br>
                     {{$albo["title"]}}
                 </div>
-            @endforeach            
+            @endforeach             --}}
         </div>
             <div class="mostra">
-                MOSTRA ALTRO
+                <a href="{{route::('comics.index')}}">MOSTRA FUMETTI</a>
             </div>
         </div>
         <div id="barra-celeste">
