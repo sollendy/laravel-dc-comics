@@ -68,10 +68,10 @@ class ComicController extends Controller
      * @param  \App\Models\Pasta  $pasta
      * @return \Illuminate\Http\Response
      */
-    // public function edit(Pasta $pasta)
-    // {
-    //     //
-    // }
+    public function edit(Comic $comic)
+    {
+        return view("comics/edit", compact("comic"));    
+    }
 
     /**
      * Update the specified resource in storage.
@@ -80,10 +80,13 @@ class ComicController extends Controller
      * @param  \App\Models\Comic  $pasta
      * @return \Illuminate\Http\Response
      */
-    // public function update(Request $request, Pasta $pasta)
-    // {
-    //     //
-    // }
+    public function update(Request $request, Comic $comic)
+    {
+        $formData = $request->all();
+        $comic->update($formData);
+        $comic->save();
+        return redirect()->route("comics.show", $comic->id);
+    }
 
     /**
      * Remove the specified resource from storage.
