@@ -5,29 +5,22 @@
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">Titolo</th>
+                <th scope="col">Serie</th>
+                <th scope="col">Data Rilascio</th>
+                <th scope="col">Prezzo</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-              </tr>
+                @foreach ($comics as $comic)
+                <tr>
+                  <td>{{$comic->id}}</td>
+                  <td>{{$comic->title}}</td>
+                  <td>{{$comic->series}}</td>
+                  <td>{{$comic->sale_date}}</td>
+                  <td>{{$comic->price}}</td>
+                </tr>
+                @endforeach
             </tbody>
           </table>
     </div>
