@@ -15,18 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-$headLinks = [
-    'personaggi',
-    'fumetti',
-    'film',
-    'tv',
-    'giochi',
-    'collezionabbili',
-    'video',
-    'fan',
-    'notizie',
-    'negozio',
-];
 
 $shopPics = [
     [
@@ -97,12 +85,14 @@ $referenze = [
         ]
     ],
 ];
+//quello di sotto è obsoleto perché per mandare tutto a home posso fare tutto in una route e due route uguali a home daranno errore 
 // Route::get('/', function () use ($headLinks){
 //     return view('home', compact('headLinks'));
 // });
-//quello di sopra è obsoleto perché per mandare tutto a home posso fare tutto in una route e due route uguali a home daranno errore 
-Route::get('/', function () use($headLinks, $shopPics, $referenze) {
-    $fumetti = config("comics");
-    return view('home', compact("fumetti", "headLinks", "shopPics", "referenze"));
-});
+
+//la route di sotto è ora obsoleta non perché incorretta ma perché abbiamo popolato staticamente i vari elenchi per non appesantire il server una volta che si lavora con i database, pertanto, gli array in alto si possono anche ignorare
+// Route::get('/', function () use($headLinks, $shopPics, $referenze) {
+//     $fumetti = config("comics");
+//     return view('home', compact("fumetti", "headLinks", "shopPics", "referenze"));
+// });
 Route::resource("/comics", ComicController::class);
