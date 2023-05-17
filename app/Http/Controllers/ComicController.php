@@ -14,11 +14,61 @@ class ComicController extends Controller
      */
     public function index()
     {
-        // return $comics = Comic::all();
-        $comics = Comic::all();
-        dd($comics);
+        $referenze = [
+            [
+                "titolo" => "DC COMICS",
+                "link" => [
+                    'personaggi',
+                    'fumetti',
+                    'film',
+                    'tv',
+                    'giochi',
+                    'video',
+                    'notizie',
+                ]
+            ],
+            [
+                "titolo" => "DC",
+                "link" => [
+                    'Termini di Utilizzo',
+                    'Accordo Riservatezza',
+                    'Aggiungi scelta',
+                    'Avvertenze',
+                    'Impieghi',
+                    'Iscrizioni',
+                    'Laboratori Talenti',
+                    'Certificati CPSC',
+                    'Recensioni',
+                    'Guida Acquisti',
+                    'Contattaci',
+                ]
+            ],
+            [
+                "titolo" => "RISORSE",
+                "link" => [
+                    'DC',
+                    'MAD magazine',
+                    'DC & Ragazzi',
+                    'Universo DC',
+                    'DC Power Visa',
+                ]
+            ],
+            [
+                "titolo" => "NEGOZIO",
+                "link" => [
+                    'Negozio DC',
+                    'Negozio DC Collezionabili',
+                ]
+            ],
+        ];
         
-        return view('comics/index', compact('comics'));
+        //lavorando coi database il model prende il sopravvento per mantenere la connessione col suddetto
+        $comics = Comic::all();
+        // $comics = config("comics");
+        return view('comics/index', compact("comics", "referenze"));
+        
+        // return $comics = Comic::all();
+        // dd($comics);
     }
 
     /**

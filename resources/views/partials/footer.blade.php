@@ -11,7 +11,52 @@
                             </li>
                         </ul>
                     </li> --}}
-                    @foreach ($referenze as $refItem)
+                    <ul>
+                        <li>
+                            <h4>DC COMICS</h4>
+                            <li>personaggi</li>
+                            <li>fumetti</li>
+                            <li>film</li>
+                            <li>tv</li>
+                            <li>giochi</li>
+                            <li>video</li>
+                            <li>notizie</li>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <h4>DC</h4>
+                            <li>Termini di Utilizzo</li>
+                            <li>Accordo Riservatezza</li>
+                            <li>Aggiungi scelta</li>
+                            <li>Avvertenze</li>
+                            <li>Impieghi</li>
+                            <li>Iscrizioni</li>
+                            <li>Laboratori Talenti</li>
+                            <li>Certificati CPSC</li>
+                            <li>Recensioni</li>
+                            <li>Guida Acquisti</li>
+                            <li>Contattaci</li>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <h4>RISORSE</h4>
+                            <li>DC</li>
+                            <li>MAD magazine</li>
+                            <li>DC & Ragazzi</li>
+                            <li>Universo DC</li>
+                            <li>DC Power Visa</li>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <h4>NEGOZIO</h4>
+                            <li>Negozio DC</li>
+                            <li>Negozio DC Collezionabili</li>
+                        </li>
+                    </ul>
+                    {{-- @foreach ($referenze as $refItem)
                         <ul>
                             <li>
                                 <h4>{{$refItem["titolo"]}}</h4>
@@ -21,7 +66,7 @@
                                 @endforeach
                             </li>
                         </ul>
-                    @endforeach
+                    @endforeach --}}
                 </ul>
             </div>
             <div id="img-foot-cnt">
