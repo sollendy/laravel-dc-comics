@@ -94,8 +94,9 @@ class ComicController extends Controller
      * @param  \App\Models\Comic  $pasta
      * @return \Illuminate\Http\Response
      */
-    // public function destroy(Pasta $pasta)
-    // {
-    //     //
-    // }
+    public function destroy(Comic $comic)
+    {
+        $comic->delete();
+        return redirect()->route("comics.index");
+    }
 }
