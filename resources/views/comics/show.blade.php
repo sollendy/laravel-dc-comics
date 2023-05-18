@@ -4,8 +4,8 @@
         <div class="container">
 
             <div class="row mb-5">
-                <div class="d-flex justify-content-start">
-                  <img id="comic-image" src="{{$comic->thumb}}" alt="copertina">
+                <div class="mt-3 w-25 d-flex justify-content-start">
+                  <img class="w-100" id="comic-image" src="{{$comic->thumb}}" alt="copertina">
                 </div>
               </div>
               <div class="row mb-4">
